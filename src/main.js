@@ -9,6 +9,8 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import "@/scss/main.scss";
 import "normalize.css";
 
+import "./filters";
+
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin

@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <div class="container">
-      <div class="logo">Vue Train</div>
+      <div class="logo">{{ `Vue Train` | upper }}</div>
       <ul id="nav" class="float-right">
         <router-link tag="li" to="/" exact>Home</router-link>
         |
