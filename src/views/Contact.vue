@@ -1,0 +1,12 @@
+<template>
+  <div class="contact">
+    <h1>Contact us</h1>
+    <h3>to get in touch with us:</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia
+      eveniet, dolores asperiores nemo vitae veritatis, numquam nam, voluptatem
+      quaerat quam recusandae ex vero sint reprehenderit tempore fugiat sunt
+      possimus?
+    </p>
+  </div>
+</template>
