@@ -2,7 +2,7 @@
   <div class="contact">
     <h1>Contact us</h1>
     <h3>to get in touch with us:</h3>
-    <p>
+    <p v-italy>
       {{
         `Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis officia
       eveniet, dolores asperiores nemo vitae veritatis, numquam nam, voluptatem
@@ -21,6 +21,13 @@ export default {
   filters: {
     short: function (v, len) {
       return v.slice(0, len) + " ...";
+    },
+  },
+  directives: {
+    italy: {
+      bind: function (el) {
+        el.style.fontStyle = "italic";
+      },
     },
   },
 };

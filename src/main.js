@@ -10,6 +10,7 @@ import "@/scss/main.scss";
 import "normalize.css";
 
 import "./filters";
+import "./directives";
 
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
