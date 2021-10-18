@@ -9,6 +9,8 @@
         |
         <router-link tag="li" to="/team">Team</router-link>
         |
+        <router-link tag="li" to="/blog">Blog</router-link>
+        |
         <router-link tag="li" to="/contact">Contact</router-link>
         |
         <router-link tag="li" to="/alerts">Alerts</router-link>

@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Team from "../views/Team.vue";
+import Blog from "../views/Blog.vue";
 import Contact from "../views/Contact.vue";
 import Alerts from "../components/Alerts.vue";
 
@@ -26,6 +27,11 @@ const routes = [
     path: "/team",
     name: "Team",
     component: Team,
+  },
+  {
+    path: "/blog",
+    name: "Blog",
+    component: Blog,
   },
   {
     path: "/contact",
