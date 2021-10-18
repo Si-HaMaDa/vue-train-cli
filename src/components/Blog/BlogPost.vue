@@ -23,7 +23,7 @@
         <p class="card-text mb-auto">
           {{ post.content | short(150) }}
         </p>
-        <router-link to="/blogSingle" class="stretched-link"
+        <router-link :to="'/blogSingle/' + post.id" class="stretched-link"
           >Continue reading</router-link
         >
       </div>
@@ -46,6 +46,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "BlogPost",
