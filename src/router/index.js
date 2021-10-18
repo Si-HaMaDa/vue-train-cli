@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Team from "../views/Team.vue";
 import Blog from "../views/Blog.vue";
+import BlogSingle from "../views/BlogSingle.vue";
 import Contact from "../views/Contact.vue";
 import Alerts from "../components/Alerts.vue";
 
@@ -32,6 +33,11 @@ const routes = [
     path: "/blog",
     name: "Blog",
     component: Blog,
+  },
+  {
+    path: "/blogSingle",
+    name: "BlogSingle",
+    component: BlogSingle,
   },
   {
     path: "/contact",

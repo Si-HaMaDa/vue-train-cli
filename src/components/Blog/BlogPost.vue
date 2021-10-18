@@ -22,7 +22,9 @@
           This is a wider card with supporting text below as a natural lead-in
           to additional content.
         </p>
-        <a href="#" class="stretched-link">Continue reading</a>
+        <router-link to="/blogSingle" class="stretched-link"
+          >Continue reading</router-link
+        >
       </div>
       <div class="col-auto d-none d-lg-block">
         <svg
