@@ -151,11 +151,8 @@ h6 {
       <div class="row g-5">
         <div class="col-md-8">
           <h3 class="pb-4 mb-4 fst-italic border-bottom">From the Firehose</h3>
-          <BlogPost />
-          <BlogPost />
-          <BlogPost />
+          <BlogPost v-for="post in posts" :key="post.id" :post="post" />
         </div>
-
         <div class="col-md-4">
           <BlogSidebar />
         </div>
@@ -167,8 +164,15 @@ h6 {
 <script>
 import BlogSidebar from "@/components/Blog/BlogSidebar";
 import BlogPost from "@/components/Blog/BlogPost";
+import Posts from "../../json/posts.json";
 export default {
   name: "Blogs",
+  data: function () {
+    return {
+      pageTitle: "Blog Posts",
+      posts: Posts,
+    };
+  },
   components: {
     BlogSidebar,
     BlogPost,

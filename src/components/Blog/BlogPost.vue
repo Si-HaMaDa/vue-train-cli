@@ -15,12 +15,13 @@
       "
     >
       <div class="col p-4 d-flex flex-column position-static">
-        <strong class="d-inline-block mb-2 text-primary">World</strong>
-        <h3 class="mb-0">Featured post</h3>
-        <div class="mb-1 text-muted">Nov 12</div>
+        <strong class="d-inline-block mb-2 text-primary">{{
+          post.category
+        }}</strong>
+        <h3 class="mb-0">{{ post.name }}</h3>
+        <div class="mb-1 text-muted">{{ post.date }}</div>
         <p class="card-text mb-auto">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content.
+          {{ post.content | short(150) }}
         </p>
         <router-link to="/blogSingle" class="stretched-link"
           >Continue reading</router-link
@@ -45,3 +46,19 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  name: "BlogPost",
+  data: function () {
+    return {
+      my: "My Post",
+    };
+  },
+  props: ["post"],
+  filters: {
+    short: function (v, len) {
+      return v.slice(0, len) + " ...";
+    },
+  },
+};
+</script>
