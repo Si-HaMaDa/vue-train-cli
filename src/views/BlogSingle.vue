@@ -151,7 +151,7 @@ h6 {
       <div class="row g-5">
         <div class="col-md-8">
           <h3 class="pb-4 mb-4 fst-italic border-bottom">From the Firehose</h3>
-          <BlogPostSingle v-for="post in posts" :key="post.id" :post="post" />
+          <BlogPostSingle :key="post.id" :post="post" />
         </div>
 
         <div class="col-md-4">
@@ -165,18 +165,33 @@ h6 {
 <script>
 import BlogSidebar from "@/components/Blog/BlogSidebar";
 import BlogPostSingle from "@/components/Blog/BlogPostSingle";
-import Posts from "../../json/posts.json";
+// import Posts from "../../json/posts.json";
+import axios from "axios";
+
 export default {
   name: "BlogSingle",
   data: function () {
     return {
       my: "My Post",
-      posts: Posts,
+      // posts: Posts,
+      post: null,
     };
+  },
+  methods: {
+    getPost: function () {
+      return axios
+        .get(
+          "https://jsonplaceholder.typicode.com/posts/" + this.$route.params.id
+        )
+        .then((res) => (this.post = res.data));
+    },
   },
   components: {
     BlogSidebar,
     BlogPostSingle,
+  },
+  created: function () {
+    this.getPost();
   },
 };
 </script>

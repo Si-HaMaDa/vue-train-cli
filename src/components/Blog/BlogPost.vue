@@ -18,10 +18,10 @@
         <strong class="d-inline-block mb-2 text-primary">{{
           post.category
         }}</strong>
-        <h3 class="mb-0">{{ post.name }}</h3>
-        <div class="mb-1 text-muted">{{ post.date }}</div>
+        <h3 class="mb-0">{{ post.title | short(25) }}</h3>
+        <!-- <div class="mb-1 text-muted">{{ post.date }}</div> -->
         <p class="card-text mb-auto">
-          {{ post.content | short(150) }}
+          {{ post.body | short(150) }}
         </p>
         <router-link :to="'/blogSingle/' + post.id" class="stretched-link"
           >Continue reading</router-link

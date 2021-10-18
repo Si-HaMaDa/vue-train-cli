@@ -164,18 +164,30 @@ h6 {
 <script>
 import BlogSidebar from "@/components/Blog/BlogSidebar";
 import BlogPost from "@/components/Blog/BlogPost";
-import Posts from "../../json/posts.json";
+// import Posts from "../../json/posts.json";
+import axios from "axios";
+
 export default {
   name: "Blogs",
   data: function () {
     return {
       pageTitle: "Blog Posts",
-      posts: Posts,
+      posts: null,
     };
+  },
+  methods: {
+    getPosts: function () {
+      return axios
+        .get("https://jsonplaceholder.typicode.com/posts")
+        .then((res) => (this.posts = res.data));
+    },
   },
   components: {
     BlogSidebar,
     BlogPost,
+  },
+  created: function () {
+    this.getPosts();
   },
 };
 </script>
