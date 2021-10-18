@@ -6,6 +6,8 @@
       |
       <router-link tag="li" to="/about">About</router-link>
       |
+      <router-link tag="li" to="/team">Team</router-link>
+      |
       <router-link tag="li" to="/contact">Contact</router-link>
     </ul>
   </div>
